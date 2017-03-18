@@ -9,12 +9,37 @@
 import UIKit
 
 class NewsTableViewController: UITableViewController {
+    
+    let publicNoticeService : PublicNoticeSevice = PublicNoticeServiceImpl();
+    
+    var publicNotices : Array<PublicNotice>? = Array<PublicNotice>()
+    
+    var myGroup = DispatchGroup()
+
+    var curPos = 0;
+    let length = 20;
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let dataModel = JQDataTableModel()
+        dataModel.iDisplayStart = String(curPos);
+        dataModel.iDisplayLength = String(length);
+        
+        myGroup.enter()
+        do {
+            try publicNotices = publicNoticeService.getByPage(dataModel: dataModel)
+             self.myGroup.leave()
+        }   catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+             myGroup.leave()
+        }
+        
+        self.myGroup.notify(queue: DispatchQueue.main, execute: {
+            print("public notice load completed")
+        })
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -28,24 +53,25 @@ class NewsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        // return the number of sections
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        // return the number of rows
+        return 10//self.publicNotices!.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		772172361E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772172351E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift */; };
 		772172381E77BDE90051D3BA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772172371E77BDE90051D3BA /* NewsTableViewController.swift */; };
+		7721723B1E7ACB110051D3BA /* EmartMaterialTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721723A1E7ACB110051D3BA /* EmartMaterialTypeService.swift */; };
+		7721723D1E7ACB9F0051D3BA /* EmartMaterialTypeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721723C1E7ACB9F0051D3BA /* EmartMaterialTypeServiceImpl.swift */; };
+		7721723F1E7B9B2B0051D3BA /* PublicNoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7721723E1E7B9B2B0051D3BA /* PublicNoticeService.swift */; };
+		772172411E7B9B920051D3BA /* PublicNoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772172401E7B9B920051D3BA /* PublicNoticeModel.swift */; };
+		772172431E7B9C850051D3BA /* PublicNoticeServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772172421E7B9C850051D3BA /* PublicNoticeServiceImpl.swift */; };
+		772172451E7BA3F90051D3BA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772172441E7BA3F90051D3BA /* TestViewController.swift */; };
 		775052061E706ED800A38FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775052051E706ED800A38FA3 /* AppDelegate.swift */; };
 		775052081E706ED800A38FA3 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775052071E706ED800A38FA3 /* FrontPageViewController.swift */; };
 		7750520A1E706ED800A38FA3 /* IttTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775052091E706ED800A38FA3 /* IttTableViewController.swift */; };
@@ -38,6 +44,7 @@
 		775842691E75D41000B04294 /* KeyStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775842681E75D41000B04294 /* KeyStoreService.swift */; };
 		7758426B1E75D4FE00B04294 /* KeyStoreServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758426A1E75D4FE00B04294 /* KeyStoreServiceImpl.swift */; };
 		7758426D1E77761C00B04294 /* EmartMaterialTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758426C1E77761C00B04294 /* EmartMaterialTypeModel.swift */; };
+		776E6B191E7CDB71002F537E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776E6B181E7CDB71002F537E /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +82,12 @@
 /* Begin PBXFileReference section */
 		772172351E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmartMaterialTypeTableViewCell.swift; path = ../EmartMaterialTypeTableViewCell.swift; sourceTree = "<group>"; };
 		772172371E77BDE90051D3BA /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		7721723A1E7ACB110051D3BA /* EmartMaterialTypeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmartMaterialTypeService.swift; sourceTree = "<group>"; };
+		7721723C1E7ACB9F0051D3BA /* EmartMaterialTypeServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmartMaterialTypeServiceImpl.swift; sourceTree = "<group>"; };
+		7721723E1E7B9B2B0051D3BA /* PublicNoticeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicNoticeService.swift; sourceTree = "<group>"; };
+		772172401E7B9B920051D3BA /* PublicNoticeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicNoticeModel.swift; sourceTree = "<group>"; };
+		772172421E7B9C850051D3BA /* PublicNoticeServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicNoticeServiceImpl.swift; sourceTree = "<group>"; };
+		772172441E7BA3F90051D3BA /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		775052021E706ED800A38FA3 /* b2biosapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = b2biosapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775052051E706ED800A38FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775052071E706ED800A38FA3 /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +121,7 @@
 		775842681E75D41000B04294 /* KeyStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyStoreService.swift; sourceTree = "<group>"; };
 		7758426A1E75D4FE00B04294 /* KeyStoreServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyStoreServiceImpl.swift; sourceTree = "<group>"; };
 		7758426C1E77761C00B04294 /* EmartMaterialTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmartMaterialTypeModel.swift; sourceTree = "<group>"; };
+		776E6B181E7CDB71002F537E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +153,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772172391E7ACADF0051D3BA /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				775842331E72D0DB00B04294 /* AbstractServiceImpl.swift */,
+				775842451E74634500B04294 /* VendorProductServiceImpl.swift */,
+				7758426A1E75D4FE00B04294 /* KeyStoreServiceImpl.swift */,
+				7721723C1E7ACB9F0051D3BA /* EmartMaterialTypeServiceImpl.swift */,
+				772172421E7B9C850051D3BA /* PublicNoticeServiceImpl.swift */,
+			);
+			name = Impl;
+			sourceTree = "<group>";
+		};
 		775051F91E706ED800A38FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +189,7 @@
 		775052041E706ED800A38FA3 /* b2biosapp */ = {
 			isa = PBXGroup;
 			children = (
+				776E6B171E7CDB45002F537E /* TableViewCell */,
 				775842351E73A24900B04294 /* Controller */,
 				775842321E72D0AC00B04294 /* Services */,
 				775842301E72CFBA00B04294 /* Commons */,
@@ -224,6 +251,7 @@
 				775842641E75A75000B04294 /* JQDataTableModel.swift */,
 				775842661E75B31200B04294 /* Constants.swift */,
 				7758426C1E77761C00B04294 /* EmartMaterialTypeModel.swift */,
+				772172401E7B9B920051D3BA /* PublicNoticeModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,12 +289,12 @@
 		775842321E72D0AC00B04294 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				775842331E72D0DB00B04294 /* AbstractServiceImpl.swift */,
+				772172391E7ACADF0051D3BA /* Impl */,
 				775842431E745FFB00B04294 /* GenericDataService.swift */,
-				775842451E74634500B04294 /* VendorProductServiceImpl.swift */,
 				775842471E74663700B04294 /* VendorProductService.swift */,
 				775842681E75D41000B04294 /* KeyStoreService.swift */,
-				7758426A1E75D4FE00B04294 /* KeyStoreServiceImpl.swift */,
+				7721723A1E7ACB110051D3BA /* EmartMaterialTypeService.swift */,
+				7721723E1E7B9B2B0051D3BA /* PublicNoticeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -274,14 +302,23 @@
 		775842351E73A24900B04294 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				772172351E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift */,
 				775842261E726E3900B04294 /* EmartTableViewController.swift */,
 				775842281E726F7D00B04294 /* MessageTableViewController.swift */,
 				775052091E706ED800A38FA3 /* IttTableViewController.swift */,
 				775052071E706ED800A38FA3 /* FrontPageViewController.swift */,
 				772172371E77BDE90051D3BA /* NewsTableViewController.swift */,
+				772172441E7BA3F90051D3BA /* TestViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		776E6B171E7CDB45002F537E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				772172351E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift */,
+				776E6B181E7CDB71002F537E /* NewsTableViewCell.swift */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,19 +463,26 @@
 				775842271E726E3900B04294 /* EmartTableViewController.swift in Sources */,
 				7750520A1E706ED800A38FA3 /* IttTableViewController.swift in Sources */,
 				7758426B1E75D4FE00B04294 /* KeyStoreServiceImpl.swift in Sources */,
+				772172411E7B9B920051D3BA /* PublicNoticeModel.swift in Sources */,
 				775842441E745FFB00B04294 /* GenericDataService.swift in Sources */,
 				775052061E706ED800A38FA3 /* AppDelegate.swift in Sources */,
 				775842671E75B31200B04294 /* Constants.swift in Sources */,
+				776E6B191E7CDB71002F537E /* NewsTableViewCell.swift in Sources */,
 				775842481E74663700B04294 /* VendorProductService.swift in Sources */,
 				772172381E77BDE90051D3BA /* NewsTableViewController.swift in Sources */,
 				775842691E75D41000B04294 /* KeyStoreService.swift in Sources */,
+				7721723D1E7ACB9F0051D3BA /* EmartMaterialTypeServiceImpl.swift in Sources */,
 				772172361E77B8E80051D3BA /* EmartMaterialTypeTableViewCell.swift in Sources */,
 				775052081E706ED800A38FA3 /* FrontPageViewController.swift in Sources */,
 				775842461E74634500B04294 /* VendorProductServiceImpl.swift in Sources */,
+				7721723F1E7B9B2B0051D3BA /* PublicNoticeService.swift in Sources */,
 				775842291E726F7D00B04294 /* MessageTableViewController.swift in Sources */,
 				7758426D1E77761C00B04294 /* EmartMaterialTypeModel.swift in Sources */,
+				772172451E7BA3F90051D3BA /* TestViewController.swift in Sources */,
+				7721723B1E7ACB110051D3BA /* EmartMaterialTypeService.swift in Sources */,
 				775842631E75A5A400B04294 /* JQDataFilter.swift in Sources */,
 				775842371E73A74800B04294 /* CoreDataManager.swift in Sources */,
+				772172431E7B9C850051D3BA /* PublicNoticeServiceImpl.swift in Sources */,
 				7758423A1E73AAA000B04294 /* b2bdb.xcdatamodeld in Sources */,
 				775842341E72D0DB00B04294 /* AbstractServiceImpl.swift in Sources */,
 				775842651E75A75000B04294 /* JQDataTableModel.swift in Sources */,

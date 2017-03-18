@@ -15,6 +15,17 @@
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PublicNotice" representedClassName="PublicNotice" syncable="YES" codeGenerationType="class">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="noticeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="VendorProduct" representedClassName=".VendorProduct" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="json" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,8 +33,9 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="VendorProduct" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="IttProject" positionX="-54" positionY="18" width="128" height="120"/>
         <element name="KeyStore" positionX="-36" positionY="54" width="128" height="135"/>
+        <element name="PublicNotice" positionX="-45" positionY="63" width="128" height="180"/>
+        <element name="VendorProduct" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>
