@@ -10,8 +10,10 @@ import Foundation
 
 protocol PublicNoticeSevice {
     
-    func getByKey(key: String) throws -> PublicNotice?;
+    func getByKey(key: String, completion: @escaping (PublicNotice?) -> Void) throws -> PublicNotice?;
     
     func getByPage(dataModel: JQDataTableModel) throws -> [PublicNotice]?;
+    
+    func getPublicNoticeFromRemote(dataModel: JQDataTableModel, completion: @escaping (Array<PublicNotice>) -> Void)
     
 }

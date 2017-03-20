@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478" y="705"/>
+            <point key="canvasLocation" x="3356" y="704.79760119940033"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -131,8 +131,8 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="obC-WA-QgP" kind="relationship" relationship="viewControllers" id="0S2-gH-AEE"/>
-                        <segue destination="gxQ-0j-Jar" kind="relationship" relationship="viewControllers" id="FSX-5O-evq"/>
-                        <segue destination="ofG-ka-MG7" kind="relationship" relationship="viewControllers" id="qVY-1S-PYw"/>
+                        <segue destination="yka-tY-hps" kind="relationship" relationship="viewControllers" id="FSX-5O-evq"/>
+                        <segue destination="KEH-oa-lYt" kind="relationship" relationship="viewControllers" id="qVY-1S-PYw"/>
                         <segue destination="rg9-Sm-dPV" kind="relationship" relationship="viewControllers" id="wpK-Ca-yG6"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="N9U-cd-mtw"/>
                     </connections>
@@ -141,7 +141,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--超市-->
+        <!--物资超市-->
         <scene sceneID="ZRZ-Vq-idh">
             <objects>
                 <tableViewController id="gxQ-0j-Jar" customClass="EmartTableViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,6 +173,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="iBE-gX-ENE" kind="show" id="bGJ-uL-hbz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -180,11 +183,11 @@
                             <outlet property="delegate" destination="gxQ-0j-Jar" id="L8E-ZC-u2M"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="超市" image="second" id="PyM-oG-XUX" customClass="Emar"/>
+                    <navigationItem key="navigationItem" title="物资超市" id="tZQ-hd-4cf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sl4-oh-5Cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="769"/>
+            <point key="canvasLocation" x="809" y="1486"/>
         </scene>
         <!--消息-->
         <scene sceneID="XAe-DL-tqy">
@@ -215,7 +218,7 @@
             </objects>
             <point key="canvasLocation" x="1478" y="56"/>
         </scene>
-        <!--要闻-->
+        <!--News Table View Controller-->
         <scene sceneID="83c-nt-pCy">
             <objects>
                 <tableViewController id="ofG-ka-MG7" customClass="NewsTableViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -247,6 +250,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="V0y-ck-voA" kind="show" identifier="ShowNewsDetails" id="b7o-ed-tPF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -254,11 +260,71 @@
                             <outlet property="delegate" destination="ofG-ka-MG7" id="EpH-KL-0zG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="要闻" image="first" id="wsR-Bd-h6v"/>
+                    <navigationItem key="navigationItem" id="cOh-sK-reI"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="vho-KZ-c0b" id="V8L-br-0mJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NdG-YT-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="769"/>
+            <point key="canvasLocation" x="-2" y="1486"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="AwU-uW-HPt">
+            <objects>
+                <viewController id="V0y-ck-voA" customClass="NewsDetailViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w8L-5n-owy"/>
+                        <viewControllerLayoutGuide type="bottom" id="4hk-ly-RLZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i2z-kr-f9s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView autoresizesSubviews="NO" contentMode="scaleAspectFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JYh-z0-AP7">
+                                <rect key="frame" x="0.0" y="67" width="375" height="544"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsWebView" destination="JYh-z0-AP7" id="Hwa-KX-0SC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVk-A7-Ba2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="2221"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Vi5-sf-l77">
+            <objects>
+                <tableViewController id="iBE-gX-ENE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="egD-O9-zoT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2cT-le-O9v">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cT-le-O9v" id="qcE-cJ-O5C">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iBE-gX-ENE" id="Ru3-71-TlJ"/>
+                            <outlet property="delegate" destination="iBE-gX-ENE" id="t6I-XQ-rs8"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6U-VW-Uns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="2231"/>
         </scene>
         <!--消息-->
         <scene sceneID="RGC-4z-mLf">
@@ -298,7 +364,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-0R-1l2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="1728"/>
+            <point key="canvasLocation" x="3372" y="1485.6071964017992"/>
+        </scene>
+        <!--要闻-->
+        <scene sceneID="YYs-40-pLN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KEH-oa-lYt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="要闻" image="first" id="wsR-Bd-h6v"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="39E-sf-29K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ofG-ka-MG7" kind="relationship" relationship="rootViewController" id="0FG-Wh-ZAv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMC-ZO-CuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="768.66566716641682"/>
+        </scene>
+        <!--超市-->
+        <scene sceneID="Sm1-Ew-bjm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yka-tY-hps" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="超市" image="second" id="PyM-oG-XUX" customClass="Emar"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIn-sI-R4P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gxQ-0j-Jar" kind="relationship" relationship="rootViewController" id="dk7-Ju-ahn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBS-df-cHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="769"/>
         </scene>
     </scenes>
     <resources>

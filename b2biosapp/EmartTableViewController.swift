@@ -33,6 +33,11 @@ class EmartTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "物资类别"
+    }
+
+    
     
     // MARK: - Table view data source
     

@@ -10,44 +10,66 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
+    @IBOutlet weak var newsTableView: UITableView!
+    
     let publicNoticeService : PublicNoticeSevice = PublicNoticeServiceImpl();
     
     var publicNotices : Array<PublicNotice>? = Array<PublicNotice>()
     
-    var myGroup = DispatchGroup()
-
     var curPos = 0;
     let length = 20;
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("loading public notice data")
         let dataModel = JQDataTableModel()
         dataModel.iDisplayStart = String(curPos);
         dataModel.iDisplayLength = String(length);
         
-        myGroup.enter()
         do {
-            try publicNotices = publicNoticeService.getByPage(dataModel: dataModel)
-             self.myGroup.leave()
+            //try publicNotices = publicNoticeService.getByPage(dataModel: dataModel)
+            try publicNoticeService.getPublicNoticeFromRemote(dataModel: dataModel) { (result) in
+                self.publicNotices = result
+                print("retrieved publicNotice count \(self.publicNotices!.count)")
+                self.newsTableView?.reloadData()
+                
+            }
         }   catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
-             myGroup.leave()
+            
         }
-        
-        self.myGroup.notify(queue: DispatchQueue.main, execute: {
-            print("public notice load completed")
-        })
-        // Uncomment the following line to preserve selection between presentations
+       
+        //to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "锦江新闻"
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowNewsDetails" {
+            
+            let detailViewController = segue.destination
+                as! NewsDetailViewController
+            
+            let myIndexPath = self.tableView.indexPathForSelectedRow!
+            let row = myIndexPath.row
+            let curNews = publicNotices?[row]
+            print ("news in row \(row) with id \(curNews?.uuid)! is selected")
+            detailViewController.newsUuid = curNews?.uuid
+            
+            //print("hidesBackButton?=\(detailViewController.navigationItem.hidesBackButton)")
+        }
     }
 
     // MARK: - Table view data source
@@ -58,9 +80,14 @@ class NewsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         // return the number of rows
-        return 10//self.publicNotices!.count
+        if self.publicNotices == nil {
+            print("no public notice loaded into the table")
+            return 0
+        } else {
+            print("count of public Notice \(self.publicNotices!.count)")
+            return self.publicNotices!.count
+        }
     }
 
     
@@ -68,7 +95,16 @@ class NewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
 
         // Configure the cell...
-
+        if let publicNotice = publicNotices?[indexPath.row] {
+            
+            cell.textLabel?.text = publicNotice.subject!
+            if let summary = publicNotice.summary {
+                cell.detailTextLabel?.text = summary
+            } else {
+                cell.detailTextLabel?.text = "";
+            }
+        }
+        
         return cell
     }
     
