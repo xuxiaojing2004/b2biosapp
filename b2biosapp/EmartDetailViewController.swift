@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmartDetailViewController: UIViewController {
+class EmartDetailViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
