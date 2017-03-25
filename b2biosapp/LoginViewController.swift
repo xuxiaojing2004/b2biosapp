@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var rememberMe: UISwitch!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     let authenticationService : AuthenticationService = AuthenticationServiceImpl()
     
     override func viewDidLoad() {
@@ -43,6 +45,7 @@ class LoginViewController: UIViewController {
         print("login through\(loginUsername.text!)/ \(loginPassword.text!)")
         
         self.remember(self.rememberMe)
+        errorLabel.isHidden = true
         
         let appLoginModel = AppLoginModel()
         appLoginModel.username = loginUsername.text!
@@ -52,12 +55,19 @@ class LoginViewController: UIViewController {
         
         do {
             try authenticationService.ssoLogin(appLoginModel: appLoginModel) { (result) in
-            
-                print("auth result: \(result)")
+                var hasToken = result[Constants.TOKEN] != nil
+                print("auth result: \(result), hasToken=\(hasToken)")
+                if hasToken {
+                    self.performSegue(withIdentifier: "ShowSecuredPages", sender: nil)
+                } else {
+                    self.errorLabel.isHidden = false
+                    self.errorLabel.text = "用户名或密码不正确"
+                    self.errorLabel.textColor = UIColor.red
+                }
             }
         } catch let error as NSError {
             print("Fail to authenticate. \(error), \(error.userInfo)")
-                
+            
         }
     }
 
@@ -85,16 +95,41 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgetPassword(_ sender: UIButton) {
+        print("forget password; to be implemented")
+        let alertController = UIAlertController(title: "TODO", message: "To be implemented.", preferredStyle: UIAlertControllerStyle.alert)
         
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            //Do nothing
+        }))
+        
+        present(alertController, animated: true, completion: nil)
     }
-    /*
+    
     // MARK: - Navigation
+    
+    /*override func shouldPerformSegue(withIdentifier identifier: String?, sender: Any?) -> Bool {
+        if let ident = identifier {
+            if ident == "ShowSecuredPages" {
+                var loginSucess =  login()
+                print("check whether to perform segue \(loginSucess)")
+                return loginSucess
+                
+            }
+        }
+        return false
+    }*/
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowSecuredPages" {
+            print("maybe need to do something")
+            
+            
+            //print("hidesBackButton?=\(detailViewController.navigationItem.hidesBackButton)"
+        }
     }
-    */
+    
 
 }

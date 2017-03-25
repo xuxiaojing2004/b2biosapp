@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-732"/>
+            <point key="canvasLocation" x="934" y="-712"/>
         </scene>
         <!--登录-->
         <scene sceneID="wg7-f3-ORb">
@@ -69,15 +69,8 @@
                                 <rect key="frame" x="122" y="401" width="37" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="username" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-vi-91i">
-                                <rect key="frame" x="14" y="65" width="343" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="密码" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SfD-WQ-Ofo">
-                                <rect key="frame" x="14" y="127" width="343" height="32"/>
+                                <rect key="frame" x="14" y="147" width="343" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -90,7 +83,6 @@
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="login:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="6hx-rD-5Ng"/>
-                                    <segue destination="umf-Tb-TU5" kind="show" id="hK5-LX-RRg"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7m-Hh-qzp">
@@ -115,19 +107,35 @@
                                     <action selector="forgetPassword:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="M1b-Bp-LRk"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="errorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBi-ZD-8Xg">
+                                <rect key="frame" x="14" y="66" width="341" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="username" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-vi-91i">
+                                <rect key="frame" x="12" y="95" width="343" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="登录" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="errorLabel" destination="QBi-ZD-8Xg" id="Ld0-L5-tVe"/>
                         <outlet property="loginPassword" destination="SfD-WQ-Ofo" id="vMw-rv-9ky"/>
                         <outlet property="loginUsername" destination="HRU-vi-91i" id="LDD-ND-WyK"/>
                         <outlet property="rememberMe" destination="O7m-Hh-qzp" id="mig-pY-OPo"/>
+                        <segue destination="umf-Tb-TU5" kind="show" identifier="ShowSecuredPages" id="PI9-ts-QZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496.8" y="768.66566716641682"/>
+            <point key="canvasLocation" x="933.60000000000002" y="1533.2833583208396"/>
         </scene>
         <!--SecuredMain-->
         <scene sceneID="iw3-Lb-ITc">
@@ -135,7 +143,7 @@
                 <viewControllerPlaceholder storyboardName="SecuredMain" id="umf-Tb-TU5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l89-Ig-r2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="1247"/>
+            <point key="canvasLocation" x="1898" y="1533"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -205,12 +213,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sl4-oh-5Cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1486"/>
+            <point key="canvasLocation" x="1990" y="737"/>
         </scene>
         <!--News Table View Controller-->
         <scene sceneID="83c-nt-pCy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NdG-YT-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ofG-ka-MG7" customClass="NewsTableViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vho-KZ-c0b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -255,48 +262,9 @@
                         <outlet property="newsTableView" destination="vho-KZ-c0b" id="V8L-br-0mJ"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdG-YT-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="1486"/>
-        </scene>
-        <!--消息-->
-        <scene sceneID="RGC-4z-mLf">
-            <objects>
-                <viewController id="Mli-s5-Scf" customClass="SecondViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zIW-zJ-yuy"/>
-                        <viewControllerLayoutGuide type="bottom" id="V1D-Wh-4SP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YKP-4N-dx7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Fourth View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BUg-dJ-EyT">
-                                <rect key="frame" x="92" y="313" width="192" height="42"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M0-sO-FP5">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1M0-sO-FP5" firstAttribute="top" secondItem="BUg-dJ-EyT" secondAttribute="bottom" constant="8" symbolic="YES" id="9Pc-lw-gc9"/>
-                            <constraint firstAttribute="centerY" secondItem="BUg-dJ-EyT" secondAttribute="centerY" id="ggo-Eb-Jij"/>
-                            <constraint firstItem="1M0-sO-FP5" firstAttribute="centerX" secondItem="BUg-dJ-EyT" secondAttribute="centerX" id="taZ-7J-3Fg"/>
-                            <constraint firstAttribute="centerX" secondItem="BUg-dJ-EyT" secondAttribute="centerX" id="wSV-fc-WOj"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="消息" image="second" id="ei0-7H-G8T"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-0R-1l2" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3372" y="1485.6071964017992"/>
+            <point key="canvasLocation" x="1990" y="0.0"/>
         </scene>
         <!--要闻-->
         <scene sceneID="YYs-40-pLN">
@@ -316,13 +284,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMC-ZO-CuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="768.66566716641682"/>
+            <point key="canvasLocation" x="934" y="0.0"/>
         </scene>
         <!--超市-->
         <scene sceneID="Sm1-Ew-bjm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yka-tY-hps" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="超市" image="second" id="PyM-oG-XUX" customClass="Emar"/>
+                    <tabBarItem key="tabBarItem" title="超市" image="second" id="PyM-oG-XUX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zIn-sI-R4P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -335,7 +303,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBS-df-cHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="769"/>
+            <point key="canvasLocation" x="934" y="738"/>
         </scene>
         <!--News-->
         <scene sceneID="N5k-lU-Gga">
@@ -343,7 +311,7 @@
                 <viewControllerPlaceholder storyboardName="News" id="NWg-3d-Og7" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFs-NQ-HcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="2221"/>
+            <point key="canvasLocation" x="2686" y="-1"/>
         </scene>
         <!--IttProject-->
         <scene sceneID="inQ-JL-dvO">
@@ -353,7 +321,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BIH-yL-BfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496" y="-124"/>
+            <point key="canvasLocation" x="781" y="-377"/>
         </scene>
         <!--Emart-->
         <scene sceneID="LzA-Tq-2hT">
@@ -361,7 +329,7 @@
                 <viewControllerPlaceholder storyboardName="Emart" id="axu-9h-BBd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9B5-RM-z9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="2231"/>
+            <point key="canvasLocation" x="2684" y="736"/>
         </scene>
     </scenes>
     <resources>

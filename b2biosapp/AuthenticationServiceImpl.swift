@@ -22,6 +22,9 @@ class AuthenticationServiceImpl : AuthenticationService {
         
         request.responseJSON { response in
             
+            print("headers \(response.response!.allHeaderFields)")
+            print("cookies \(HTTPCookieStorage.shared.cookies)")
+            
             var resultDict = Dictionary<String, Any>()
             if let jsonResultString = response.result.value {
                 //print("public notice JSON: \(jsonResultString)")

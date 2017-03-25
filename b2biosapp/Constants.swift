@@ -24,6 +24,10 @@ class Constants {
     
     public static let GET_PUBLIC_NOTICE_URL = SERVER_BASE_URL + "public/notice/v2/{uuid}/get.do"; //GET
     
+    public static let GET_PRIVATE_MESSAGES_URL =  SERVER_BASE_URL + "/secureapi/message/get.do"; //POST
+    
+    public static let GET_PRIVATE_MESSAGE_URL =  SERVER_BASE_URL + "/secureapi/message/{messageId}/get.do"; //GET
+    
     public static let KEY_EMART_MATERIAL_TYPE = "KEY_EMART_MATERIAL_TYPE";
     
     //public static let KEY_PUBLIC_NOTICE = "KEY_PUBLIC_NOTICE";
