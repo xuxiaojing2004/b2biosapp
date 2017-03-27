@@ -57,16 +57,18 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowNewsDetails" {
+        print("current segue is \(segue.identifier)")
+        if segue.identifier == "ShowNewsDetail" {
+            print("current segue is \(segue.identifier)")
             
-            let detailViewController = segue.destination
-                as! NewsDetailViewController
+            let newsViewController = segue.destination
+                as! NewsViewController
             
             let myIndexPath = self.tableView.indexPathForSelectedRow!
             let row = myIndexPath.row
             let curNews = publicNotices?[row]
             print ("news in row \(row) with id \(curNews?.uuid)! is selected")
-            detailViewController.newsUuid = curNews?.uuid
+            newsViewController.newsUuid = curNews?.uuid
             
             //print("hidesBackButton?=\(detailViewController.navigationItem.hidesBackButton)")
         }

@@ -159,7 +159,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="DAD-xQ-5Lj" kind="relationship" relationship="viewControllers" id="0S2-gH-AEE"/>
                         <segue destination="yka-tY-hps" kind="relationship" relationship="viewControllers" id="FSX-5O-evq"/>
-                        <segue destination="KEH-oa-lYt" kind="relationship" relationship="viewControllers" id="qVY-1S-PYw"/>
+                        <segue destination="NWg-3d-Og7" kind="relationship" relationship="viewControllers" id="Wzn-wo-iak"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="N9U-cd-mtw"/>
                     </connections>
                 </tabBarController>
@@ -215,77 +215,6 @@
             </objects>
             <point key="canvasLocation" x="1990" y="737"/>
         </scene>
-        <!--News Table View Controller-->
-        <scene sceneID="83c-nt-pCy">
-            <objects>
-                <tableViewController id="ofG-ka-MG7" customClass="NewsTableViewController" customModule="b2biosapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vho-KZ-c0b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" textLabel="Zev-pT-kWV" detailTextLabel="pQU-7b-gNY" style="IBUITableViewCellStyleSubtitle" id="Ean-0b-8nZ" customClass="NewsTableViewCell" customModule="b2biosapp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ean-0b-8nZ" id="6zN-RG-wFv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zev-pT-kWV">
-                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pQU-7b-gNY">
-                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="NWg-3d-Og7" kind="show" identifier="ShowNewsDetails" id="b7o-ed-tPF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ofG-ka-MG7" id="kDS-Ek-kjl"/>
-                            <outlet property="delegate" destination="ofG-ka-MG7" id="EpH-KL-0zG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="cOh-sK-reI"/>
-                    <connections>
-                        <outlet property="newsTableView" destination="vho-KZ-c0b" id="V8L-br-0mJ"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NdG-YT-bdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="0.0"/>
-        </scene>
-        <!--要闻-->
-        <scene sceneID="YYs-40-pLN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KEH-oa-lYt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="要闻" image="first" id="wsR-Bd-h6v"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="39E-sf-29K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ofG-ka-MG7" kind="relationship" relationship="rootViewController" id="0FG-Wh-ZAv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bMC-ZO-CuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="934" y="0.0"/>
-        </scene>
         <!--超市-->
         <scene sceneID="Sm1-Ew-bjm">
             <objects>
@@ -308,10 +237,12 @@
         <!--News-->
         <scene sceneID="N5k-lU-Gga">
             <objects>
-                <viewControllerPlaceholder storyboardName="News" id="NWg-3d-Og7" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="News" id="NWg-3d-Og7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="要闻" id="ip0-YF-OLK"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFs-NQ-HcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="-1"/>
+            <point key="canvasLocation" x="821" y="14"/>
         </scene>
         <!--IttProject-->
         <scene sceneID="inQ-JL-dvO">

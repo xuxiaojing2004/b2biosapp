@@ -138,7 +138,7 @@
                   moduleName = "b2biosapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaojingxu/iosspace/b2biosapp/b2biosapp/GenericDataService.swift"
-                  timestampString = "511935572.67475"
+                  timestampString = "512284975.22704"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -153,7 +153,7 @@
                   moduleName = "b2biosapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaojingxu/iosspace/b2biosapp/b2biosapp/GenericDataService.swift"
-                  timestampString = "511935572.678217"
+                  timestampString = "512284975.230948"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -168,7 +168,7 @@
                   moduleName = "b2biosapp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xiaojingxu/iosspace/b2biosapp/b2biosapp/GenericDataService.swift"
-                  timestampString = "511935572.679823"
+                  timestampString = "512284975.232554"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -425,11 +425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "b2biosapp/NewsTableViewController.swift"
-            timestampString = "511662569.119863"
+            timestampString = "512281962.907184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -473,12 +473,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "b2biosapp/LoginViewController.swift"
-            timestampString = "511935064.097888"
+            timestampString = "512064055.444973"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "remember(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "b2biosapp/PrivateMessageContentViewCell.swift"
+            timestampString = "512103489.310701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "PrivateMessageContentViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "b2biosapp/NewsViewController.swift"
+            timestampString = "512282650.124143"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "b2biosapp.NewsViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "b2biosapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaojingxu/iosspace/b2biosapp/b2biosapp/NewsViewController.swift"
+                  timestampString = "512269127.266754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "b2biosapp.NewsViewController.(viewDidLoad () -&gt; ()).(closure #1)"
+                  moduleName = "b2biosapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaojingxu/iosspace/b2biosapp/b2biosapp/NewsViewController.swift"
+                  timestampString = "512269127.26819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "698">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "b2biosapp/NewsTableViewController.swift"
+            timestampString = "512270819.951273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "b2biosapp/NewsTableViewController.swift"
+            timestampString = "512281962.907184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

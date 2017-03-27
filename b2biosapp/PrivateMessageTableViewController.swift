@@ -52,6 +52,7 @@ class PrivateMessageTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("current segue is \(segue.identifier)")
         if segue.identifier == "ShowPrivateMessage" {
             
             let messageViewController = segue.destination
